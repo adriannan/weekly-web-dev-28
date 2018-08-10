@@ -1,32 +1,25 @@
+*:focus {
+    outline: none !important;
+}
 .header{
 	background-color: #252525;
-	min-height: 675px;
-}
-/*.header::after{
-	content: '';
-	background-color: #252525;
-	display: block;
-	position: fixed;
-	width: 100%;
-	height: 100px;
-	top: -100px;
-	right: 0px;
-	z-index: -1;
-}*/
-
-.ccc{
-	background-color: #fff;
-	height: 200px;
-	width: 100%;
+	height: 100vh;
+	max-height: 675px;
+	min-height: 300px;
 }
 .header::before{
 	content:'';
-	width: 95vw;
-	min-height: 592px;
+	width: 95vw;	
+	min-height: 240px;
+	max-height: 600px;
+	/*height: 92vh;*/
+	height: auto;
+	/*height: 87vh;*/
 	border: 1px solid #3B3B3B;
 	top: 41px;
 	right: 1vw;
 	left: 1vw;
+	bottom: 20px;
 	display: inline-block;
 	position: absolute;
 	z-index: 100;
@@ -66,26 +59,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 1040;
+}
+.navbar:first-child {
+  z-index: 99999;
 }
 .nav-item{
-		/*display: inline-block;*/
-		/*position: absolute;*/
-		background-color: #252525;
-		z-index: 1050;
-}
-/*.navbar::before{
-	content: '';
 	background-color: #252525;
-	background-color: pink;
-	display: block;
-	position: fixed;
-	width: 100%;
-	height: 100px;
-	top: 0px;
-	left: 0px;
-	z-index: -9999 !important;
-}*/
+	z-index: 1050;
+}
 .nav-link {
 	color: #fff; 
 	text-transform: uppercase;
@@ -103,46 +84,44 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-/*	font-size: 1.3em;
-*/	padding: 0 1.5vw;
+	padding: 0 1.5vw;
 }
 .carousel{
-	top: 64px;
 	background-color: #252525;
 	width: 94%;
 	margin: 0 auto;
-	min-height: 600px;
+	height: 100%;
+	max-height: 662px;
 }
 .carousel-inner{
-	/*height: auto;*/
-
+	height: 100%;
 }
 .carousel-item{
-	/*height: 400px;*/
+	height: 110%;
 	color: #fff;
 	font-family: 'Frank Ruhl Libre', serif;
 	font-size: 2.4em;
 	font-weight: 300;
 	text-align: center;
-	/*line-height: 2.4em;*/
-	margin-top: 200px;
+	margin:  auto 0;
 }
-.carousel-item p:last-child{
+.slide-text p:last-child{
 	font-size: 1.4em;
 	font-weight: 600;
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
 	color: #f2989e;
-
 }
-/*.carousel-inner .active{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}*/
 .carousel-indicators{
 	z-index: 1035;
+	bottom: -1px;
+}
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
 }
 .carousel-indicators .active{
 	background-color: #f2989e;
@@ -154,6 +133,7 @@
 	background-color: #3B3B3B;
 	transform: rotate(45deg);
 	margin: 0 6px;
+	margin-bottom: .1vh;
 }
 
  .carousel-control-prev, .carousel-control-next {
@@ -172,9 +152,27 @@
  	width: 30px;
  	height: 20px;
  }
-.services-section{
-	height: 500px;
+.section-general{
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
+section hgroup{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+}
+.serv-img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/* *** MEDIA QUERIES *** */
 
 @media screen and (max-width: 767px){
 	nav {
@@ -183,19 +181,50 @@
 	.hidden-md{
 		display: none;
 	}
+	.header::before{
+		/*top: 41px;*/
+	}
 	.navbar{
 		position: fixed;
-		right: 60vw;
-		width: 60px;
+		justify-content: flex-start;
+		padding: 5vh 2.5vw; 
+		width: 100%;
 	}
-	.navbar-md{
+/*	.navbar-md{
 		width: 100%;
 		justify-content: flex-start;
 		padding: 1vw 2vw; 
+	}*/
+	.carousel-item{
+	font-size: 2em;
 	}
-	.navbar-border::before, .navbar-border::after{
-		display: none;
-	}
+		.navbar-border::before{
+		content:'';
+		width: 20vw;
+		height: 80px;
+		border-top: 1px solid #3B3B3B;
+		border-left: 1px solid #3B3B3B;
+		top: 5vh;
+		left: 2.5vw;
+		display: inline-block;
+		position: absolute;
+		z-index: -10;
+		margin: 0 auto;
+		border-top-left-radius: .25rem;
+		}
+		.navbar-border::after{
+		content:'';
+		width: 80vw;
+		height: 80px;
+		border-top: 1px solid #3B3B3B;
+		border-right: 1px solid #3B3B3B;
+		top: 5vh;
+		right: 2.5vw;
+		display: inline-block;
+		position: absolute;
+		z-index: -10;
+		margin: 0 auto;
+		}
 
 
 

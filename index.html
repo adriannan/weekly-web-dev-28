@@ -12,14 +12,14 @@
 </head>
 
 <body>
-	<div class="header conainer-fluid">
+	<div class="header container-fluid heih">
 		<nav class="navbar fixed-top navbar-dark navbar-expand-md navbar-dark-cust navbar-border" id="navbar">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav m-auto">
-					<li class="nav-item "><a class="nav-link nav-item-hov active" href="#">home</a></li>
+					<li class="nav-item"><a class="nav-link nav-item-hov active" href="#">home</a></li>
 					<li class="nav-item"><a class="nav-link active" href="#">albums</a></li>
 					<li class="nav-item"><a class="nav-link active" href="#">shop</a></li>
 					<li class="nav-item"><a class="nav-link active navbar-brand m-auto hidden-md" href="#">sophia</a></li>
@@ -30,23 +30,24 @@
 			</div>
 		</nav>
 		<div id="carouselExampleIndicators" class="carousel slide conainer-fluid" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
 			<div class="carousel-inner">
 			    <div class="carousel-item active">
-			    	<p>I take photos</p>
-			    	<p>in the woods</p>
+				    <div class="slide-text">
+				    	<p>I take photos</p>
+				    	<p>in the woods</p>
+				    </div>
 			    </div>
 			    <div class="carousel-item">
-			    	<p>I take photos</p>
-			    	<p>in the woods</p>
+				    <div class="slide-text">
+				    	<p>I take photos</p>
+				    	<p>in the woods</p>
+				    </div>
 			    </div>
 			    <div class="carousel-item">
-			    	<p>I take photos</p>
-			    	<p>in the woods</p>
+			    	<div class="slide-text">
+				    	<p>I take photos</p>
+				    	<p>in the woods</p>
+				    </div>
 			    </div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev">
@@ -55,12 +56,29 @@
 			<a class="carousel-control-next" href="#carouselExampleIndicators" data-slide="next">
 				<span class="carousel-control-next-icon"></span>
 			</a>
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
 		</div>
 	</div>
-	<section class="services-section">
+	<section class="services-section container-fluid section-general">
+		<div class="row align-items-center justify-content-center">
+			<hgroup class="col-md-4">
+				<h2>my services</h2>
+				<p>for me, photography is both<br> a hobby and a proffesion</p>
+			</hgroup>
+		</div>
+		<div class="row align-items-center justify-content-center">
+			<div class="col-3"><img src="images/service-1.png" class="serv-img"></div>
+			<div class="col-3"><img src="images/service-2.png" class="serv-img"></div>
+			<div class="col-3"><img src="images/service-3.png" class="serv-img"></div>
+		</div>
+	</section>
+	<section class="albums-section section-general" style="border: 1px solid pink">
 		
 	</section>
-
 
 
 
