@@ -354,8 +354,7 @@ hgroup p{
 	line-height: 1em;
 }
 .album-caption button:hover{
-	background-color: #f2878e;
-    filter: drop-shadow(0px 0px 1px gray);
+    filter: brightness(105%) drop-shadow(0px 0px 1.5px gray);
     transition: all .1s linear;
 }
 
