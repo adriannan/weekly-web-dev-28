@@ -1,4 +1,4 @@
-$('.carousel').carousel();
+// $('.carousel').carousel();
 
 function fixNav() {
         if(window.pageYOffset >= 557) {
@@ -14,3 +14,15 @@ function fixNav() {
 };
 
 $(window).on('scroll', fixNav);
+
+$('.t-carousel .t-carousel-item').each(function(){
+	  var next = $(this).next();
+	  if (!next.length) {
+	    next = $(this).siblings(':first');
+	  }
+	  next.children(':first-child').clone().appendTo($(this));
+	});
+
+$('#tho-carousel').carousel({
+  // interval: 10000
+})
