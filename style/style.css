@@ -205,11 +205,11 @@ hgroup p{
     </text></svg>");
     z-index: -999;
 }*/
-.services-section, .albums-section, .thoughts-section, .about-section{
+.services-section, .albums-section, .thoughts-section, .about-section, .shop-section{
 	position: relative;
 	overflow: hidden;
 }
-.services-section::before, .albums-section::before, .thoughts-section::before, .about-section::before{
+.services-section::before, .albums-section::before, .thoughts-section::before, .about-section::before, .shop-section::before{
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -223,6 +223,7 @@ hgroup p{
 	font-weight: 600;
 	text-shadow: 0px 0px 10vw #eaeaea;
 	z-index: -1;
+	white-space: nowrap;
 }
 .services-section::before{	
 	content: "services";
@@ -235,6 +236,10 @@ hgroup p{
 }
 .about-section::before{	
 	content: "about";
+}
+.shop-section::before{	
+	content: "my shop";
+  	top: 40%;
 }
 
 
@@ -256,8 +261,8 @@ hgroup p{
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-
 }
+
 .serv-box, .album-item a{
 	position: relative;
 	display: flex;
@@ -388,7 +393,52 @@ hgroup p{
 	grid-row: 3/4;
 }
 
-
+.shop-box h4{ 
+	position: absolute; 
+	font-family: 'Josefin Sans', sans-serif;
+	color: #f2989e;
+	top: 1vw;
+	left: 1vw;
+	font-size: 1em;
+}
+.shop-box{
+	height: 25vw;
+	margin: 1vw;
+	background-color: #eaeaea;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.shop-item img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 1vw grey;
+	transition: .2s linear;
+}
+.shop-box:hover img{
+	transform: scale(1.1);
+	transition: all .2s linear;
+}
+.shop-box a, .shop-item{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-box a{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+.shop-item{
+	transition: all .2s linear;
+	z-index: 1;
+	height: 18vw;
+	position: relative;
+    width: 100%;
+    max-width: 18vw;
+}
 
 /* ***   THOUGHTS SECTION   *** */
 	
@@ -400,7 +450,7 @@ hgroup p{
 	justify-content: center;
 	align-items: center;
 }
-.t-carousel-inner {
+.t-carousel-inner{
 	width: 80vw;
 	margin: 0 auto;
 	overflow: hidden;
@@ -520,3 +570,44 @@ hgroup p{
 
 
 }
+
+
+
+
+
+@media {
+	.s-item-1{
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+.s-item-2{
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+.s-item-3{
+	grid-column: 3/4;
+	grid-row: 1/2;
+}
+.s-item-4{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+.s-item-5{
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+.s-item-6{
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+
+
+
+
+
+
+
+
+
+
+
