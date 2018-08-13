@@ -205,11 +205,11 @@ hgroup p{
     </text></svg>");
     z-index: -999;
 }*/
-.services-section, .albums-section, .thoughts-section, .about-section, .shop-section{
+.services-section, .albums-section, .thoughts-section, .about-section, .shop-section, .contact-section{
 	position: relative;
 	overflow: hidden;
 }
-.services-section::before, .albums-section::before, .thoughts-section::before, .about-section::before, .shop-section::before{
+.services-section::before, .albums-section::before, .thoughts-section::before, .about-section::before, .shop-section::before, .contact-section::before{
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -241,6 +241,9 @@ hgroup p{
 	content: "my shop";
   	top: 40%;
 }
+.contact-section::before{	
+	content: "contact";
+}
 
 
 
@@ -263,7 +266,7 @@ hgroup p{
 	object-position: center;
 }
 
-.serv-box, .album-item a{
+.serv-box, .album-item a, .conctact-caption{
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -317,7 +320,7 @@ hgroup p{
 /*   ALBUMS  &  ABOUT   SECTION   */
 
 
-.album-caption, .album-caption hgroup, .about-caption{
+.album-caption, .album-caption hgroup, .about-caption, .contact-caption, .contact-caption hgroup{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -328,13 +331,13 @@ hgroup p{
 	align-items: flex-start;
 	padding-bottom: 0;
 }
-.album-caption hgroup p{
+.album-caption hgroup p, .contact-caption hgroup p{
 	text-align: right;
 }
 .about-caption hgroup p{
 	text-align: left;
 }
-.album-caption button, .about-caption button{
+.album-caption button, .about-caption button, .contact-caption button{
 	text-transform: uppercase;
 	color: #fff;
 	background-color: #f2989e;
@@ -346,14 +349,11 @@ hgroup p{
 	transition: all .1s linear;
 	line-height: 1em;
 }
-.album-caption button:hover, .about-caption button:hover{
+.album-caption button:hover, .about-caption button:hover, .contact-caption button:hover{
     filter: brightness(105%) drop-shadow(0px 0px 1.5px gray);
     transition: all .1s linear;
 }
 
-/*.album-gallery-box{
-	padding: 0;
-}*/
 .albums-section .row div:last-child{
 		padding: 0;
 }
@@ -438,6 +438,45 @@ hgroup p{
 	position: relative;
     width: 100%;
     max-width: 18vw;
+}
+
+/*   *** CONTACT SECTION ***   */
+.contact-details dl{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #f2989e;
+	color: #fff;
+	padding: 5vw;
+}
+.contact-details dt{
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	padding-top: 2vw; 
+	font-size: .7em;
+}
+
+.contact-details dd:not(:last-child){
+	border-bottom: 1px solid #f4c1c4;
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+.contact-details dd{
+	padding-bottom: 2vw; 
+	margin-bottom: 0;
+}
+.contact-details dd a{
+	font-family: 'Frank Ruhl Libre', serif;
+	font-weight: 300;
+	color: #fff;
+	color: rgba(255, 255, 255, .9);
+	text-decoration: none;
+	transition: .1s linear;
+	font-size: 1.5em;
+}
+.contact-details dd a:hover{
+    filter: drop-shadow(0px 0px .3px #fff);
+	transition: all .1s linear;
 }
 
 /* ***   THOUGHTS SECTION   *** */
