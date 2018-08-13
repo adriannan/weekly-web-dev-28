@@ -205,11 +205,11 @@ hgroup p{
     </text></svg>");
     z-index: -999;
 }*/
-.services-section, .albums-section, .thoughts-section{
+.services-section, .albums-section, .thoughts-section, .about-section{
 	position: relative;
 	overflow: hidden;
 }
-.services-section::before, .albums-section::before, .thoughts-section::before{
+.services-section::before, .albums-section::before, .thoughts-section::before, .about-section::before{
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -233,10 +233,13 @@ hgroup p{
 .thoughts-section::before{	
 	content: "thoughts";
 }
+.about-section::before{	
+	content: "about";
+}
 
 
 
-.serv-box img, .album-gallery img{
+.serv-box img, .album-gallery img, .about-img img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -244,6 +247,16 @@ hgroup p{
 	filter: grayscale(100%) brightness(80%);
 	z-index: -1;
 	transition: .2s linear;
+}
+.about-img {
+	height: 40vw;
+	padding: 0;
+}
+.about-img img{
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+
 }
 .serv-box, .album-item a{
 	position: relative;
@@ -296,7 +309,42 @@ hgroup p{
 }
 
 
-/*   ALBUMS SECTION   */
+/*   ALBUMS  &  ABOUT   SECTION   */
+
+
+.album-caption, .album-caption hgroup, .about-caption{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 0;
+}
+.about-caption, .about-caption hgroup{
+	align-items: flex-start;
+	padding-bottom: 0;
+}
+.album-caption hgroup p{
+	text-align: right;
+}
+.about-caption hgroup p{
+	text-align: left;
+}
+.album-caption button, .about-caption button{
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #f2989e;
+	margin-top: 1vw;
+	padding: 15px 15px 13px 15px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: .7em;
+	border-radius: 0px;
+	transition: all .1s linear;
+	line-height: 1em;
+}
+.album-caption button:hover, .about-caption button:hover{
+    filter: brightness(105%) drop-shadow(0px 0px 1.5px gray);
+    transition: all .1s linear;
+}
 
 /*.album-gallery-box{
 	padding: 0;
@@ -340,31 +388,6 @@ hgroup p{
 	grid-row: 3/4;
 }
 
-.album-caption, .album-caption hgroup{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
-	padding-bottom: 0;
-}
-.album-caption hgroup p{
-	text-align: right;
-}
-.album-caption button{
-	text-transform: uppercase;
-	color: #fff;
-	background-color: #f2989e;
-	padding: 15px 15px 13px 15px;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: .7em;
-	border-radius: 0px;
-	transition: all .1s linear;
-	line-height: 1em;
-}
-.album-caption button:hover{
-    filter: brightness(105%) drop-shadow(0px 0px 1.5px gray);
-    transition: all .1s linear;
-}
 
 
 /* ***   THOUGHTS SECTION   *** */
