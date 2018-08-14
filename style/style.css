@@ -74,7 +74,7 @@ overflow-x: hidden;
 .nav-link {
 	color: #fff; 
 	text-transform: uppercase;
-	font-size: .9em;
+	font-size: .8em;
 }
 .nav-link:hover {
 	color: #f2989e !important; 
@@ -88,7 +88,7 @@ overflow-x: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 1.5vw;
+	padding: 0 1vw;
 }
 .h-carousel{
 	background-color: #252525;
@@ -165,7 +165,6 @@ overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/*padding: 80px 0;*/
 	padding: 5vw 0;
 }
 section hgroup{
@@ -315,7 +314,10 @@ hgroup p{
 	color: #fff;
 	text-transform: uppercase;
 }
-
+ .services-section hgroup p, .thoughts-section hgroup p{
+ 	/*max-width: 60vw;*/
+ 	max-width: 460px;
+ }
 
 /*   ALBUMS  &  ABOUT   SECTION   */
 
@@ -350,7 +352,7 @@ hgroup p{
 	line-height: 1em;
 }
 .album-caption button:hover, .about-caption button:hover, .contact-caption button:hover{
-    filter: brightness(105%) drop-shadow(0px 0px 1.5px gray);
+    filter: brightness(110%) drop-shadow(0px 0px 1.5px gray);
     transition: all .1s linear;
 }
 
@@ -409,6 +411,8 @@ hgroup p{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+		transition: .2s linear;
+
 }
 .shop-item img{
     max-width: 100%;
@@ -416,6 +420,11 @@ hgroup p{
     margin: auto;
     box-shadow: 0px 0px 1vw grey;
 	transition: .2s linear;
+}
+.shop-box:hover{
+	background-color: #f2f2f2;
+		transition: .2s linear;
+
 }
 .shop-box:hover img{
 	transform: scale(1.1);
@@ -457,7 +466,7 @@ hgroup p{
 	font-size: .7em;
 }
 
-.contact-details dd:not(:last-child){
+.contact-details dd:not(:last-child), footer nav, footer div:not(:last-child){
 	border-bottom: 1px solid #f4c1c4;
 	border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
@@ -551,6 +560,62 @@ hgroup p{
 	line-height: 1.8em;
 	color: gray;
 }
+
+/* *** FOOTER *** */
+footer{
+	background-color: #000;
+	color: #fff;
+	min-height: 40vh;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5vw 0;
+}
+footer nav, footer div{
+	padding-top: 3vw; 
+	font-size: .7em;
+}
+footer nav, footer div{
+	padding-bottom: 3vw; 
+	margin-bottom: 0;
+}
+footer nav, footer nav ul{
+	padding-right: 0;
+	padding-left: 0;
+
+}
+
+footer nav ul li{
+	list-style-type: none;
+	text-align: center;
+}
+footer nav ul li a{
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	transition: all .1s ease-out;
+}
+footer nav ul li a:hover, .social a:hover{
+	text-decoration: none;
+	color: #f2989e;
+	transform: scale(0.95);
+	transition: all .1s ease-out;
+}
+
+footer nav ul li a, .social a{
+	color: #fff;
+}
+.social a{
+	font-size: 3.6em;
+	text-align: center;
+	transition: all .1s ease-out;
+}
+.copyright p{
+	font-family: 'Frank Ruhl Libre', serif;
+	font-weight: 300;
+	font-size: 1.8em;
+	text-align: center;
+	margin: 0;
+}
+
 
 /* *** MEDIA QUERIES *** */
 
