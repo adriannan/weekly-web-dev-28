@@ -10,6 +10,7 @@ overflow-x: hidden;
 	height: 100vh;
 	max-height: 675px;
 	min-height: 300px;
+	margin-bottom: 5vw;
 }
 .header::before{
 	content:'';
@@ -161,7 +162,7 @@ overflow-x: hidden;
  /*   *** GENERAL ***   */
 
 .section-general{
-	min-height: 500px;
+	/*min-height: 500px;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -172,7 +173,7 @@ section hgroup{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 5vw;
+	padding-bottom: 4vw;
 }
 hgroup h3{
 	font-family: 'Josefin Sans', sans-serif;
@@ -314,13 +315,13 @@ hgroup p{
 	color: #fff;
 	text-transform: uppercase;
 }
- .services-section hgroup p, .thoughts-section hgroup p{
+ .services-section hgroup p, .thoughts-section hgroup p, .shop-section hgroup p{
  	/*max-width: 60vw;*/
  	max-width: 460px;
+ 	/*max-width: 13em;*/
  }
 
 /*   ALBUMS  &  ABOUT   SECTION   */
-
 
 .album-caption, .album-caption hgroup, .about-caption, .contact-caption, .contact-caption hgroup{
 	display: flex;
@@ -328,6 +329,10 @@ hgroup p{
 	justify-content: center;
 	align-items: flex-end;
 	padding-bottom: 0;
+}
+
+.album-caption hgroup, .about-caption hgroup{
+	max-width: 22em;
 }
 .about-caption, .about-caption hgroup{
 	align-items: flex-start;
@@ -355,9 +360,13 @@ hgroup p{
     filter: brightness(110%) drop-shadow(0px 0px 1.5px gray);
     transition: all .1s linear;
 }
-
-.albums-section .row div:last-child{
-		padding: 0;
+.album-content-right, .about-content-left{
+	padding: 0;
+}
+.album-content-left, .album-content-right, .about-content-left, .about-content-right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .album-gallery{
 	margin: 0;
@@ -411,7 +420,7 @@ hgroup p{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-		transition: .2s linear;
+	transition: .2s linear;
 
 }
 .shop-item img{
@@ -423,7 +432,7 @@ hgroup p{
 }
 .shop-box:hover{
 	background-color: #f2f2f2;
-		transition: .2s linear;
+	transition: .2s linear;
 
 }
 .shop-box:hover img{
@@ -450,6 +459,10 @@ hgroup p{
 }
 
 /*   *** CONTACT SECTION ***   */
+.contact-details {
+	padding: 0;
+
+}
 .contact-details dl{
 	display: flex;
 	flex-direction: column;
@@ -562,51 +575,55 @@ hgroup p{
 }
 
 /* *** FOOTER *** */
-footer{
+.footer{
 	background-color: #000;
 	color: #fff;
 	min-height: 40vh;
 	flex-direction: column;
 	justify-content: center;
 	padding: 5vw 0;
+	margin-top: 5vw;
 }
-footer nav, footer div{
+.footer nav, .footer div{
 	padding-top: 3vw; 
 	font-size: .7em;
 }
-footer nav, footer div{
+.footer nav, .footer div{
 	padding-bottom: 3vw; 
 	margin-bottom: 0;
 }
-footer nav, footer nav ul{
+.footer nav, .footer nav ul{
 	padding-right: 0;
 	padding-left: 0;
 
 }
 
-footer nav ul li{
+.footer nav ul li{
 	list-style-type: none;
 	text-align: center;
+	max-width: 8em;
 }
-footer nav ul li a{
+
+.footer nav ul li a{
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
 	transition: all .1s ease-out;
 }
-footer nav ul li a:hover, .social a:hover{
+.footer nav ul li a:hover, .social a:hover{
 	text-decoration: none;
 	color: #f2989e;
 	transform: scale(0.95);
 	transition: all .1s ease-out;
 }
 
-footer nav ul li a, .social a{
+.footer nav ul li a, .social a{
 	color: #fff;
 }
 .social a{
-	font-size: 3.6em;
+	font-size: 3.4em;
 	text-align: center;
 	transition: all .1s ease-out;
+	max-width: 2em;
 }
 .copyright p{
 	font-family: 'Frank Ruhl Libre', serif;
@@ -674,44 +691,4 @@ footer nav ul li a, .social a{
 
 
 }
-
-
-
-
-
-@media {
-	.s-item-1{
-	grid-column: 1/2;
-	grid-row: 1/2;
-}
-.s-item-2{
-	grid-column: 2/3;
-	grid-row: 1/2;
-}
-.s-item-3{
-	grid-column: 3/4;
-	grid-row: 1/2;
-}
-.s-item-4{
-	grid-column: 1/2;
-	grid-row: 2/3;
-}
-.s-item-5{
-	grid-column: 2/3;
-	grid-row: 2/3;
-}
-.s-item-6{
-	grid-column: 3/4;
-	grid-row: 2/3;
-}
-
-
-
-
-
-
-
-
-
-
 
