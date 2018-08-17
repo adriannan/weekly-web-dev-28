@@ -17,9 +17,7 @@ overflow-x: hidden;
 	width: 95vw;	
 	min-height: 240px;
 	max-height: 600px;
-	/*height: 92vh;*/
 	height: auto;
-	/*height: 87vh;*/
 	border: 1px solid #3B3B3B;
 	top: 41px;
 	right: 1vw;
@@ -109,6 +107,7 @@ overflow-x: hidden;
 	font-weight: 300;
 	text-align: center;
 	margin:  auto 0;
+	white-space: nowrap;
 }
 .h-slide-text p:last-child{
 	font-size: 1.4em;
@@ -643,22 +642,21 @@ hgroup p{
 	.hidden-md{
 		display: none;
 	}
-	.header::before{
-		/*top: 41px;*/
-	}
 	.navbar{
 		position: fixed;
 		justify-content: flex-start;
 		padding: 5vh 2.5vw; 
 		width: 100%;
 	}
-/*	.navbar-md{
-		width: 100%;
-		justify-content: flex-start;
-		padding: 1vw 2vw; 
-	}*/
-	.h-carousel-item{
-	font-size: 2em;
+	.header{
+		padding: 0;
+	}
+
+ 	.h-carousel-item{
+		font-size: 2em;
+	}
+	.h-slide-text p:last-child{
+		font-size: 1.2em;
 	}
 		.navbar-border::before{
 		content:'';
@@ -687,8 +685,94 @@ hgroup p{
 		z-index: -10;
 		margin: 0 auto;
 		}
-
-
-
+	.serv-content{
+		flex-direction: column;
+	}
+	.serv-item{
+		margin-bottom: 4vw;
+	}
+	.album-content-left{
+		margin: 0 auto;
+	}
+	.album-caption, .album-caption hgroup, .about-caption, .about-caption hgroup, .contact-caption, .contact-caption hgroup{
+		align-items: center;
+	}
+	.album-caption hgroup p, .contact-caption hgroup p, .about-caption hgroup p{
+		text-align: center;
+	}
+	.album-caption, .about-caption, .services-section hgroup, .contact-caption{
+		margin-bottom: 4vw;
+	}
+	.services-section hgroup, .album-caption hgroup, .about-caption hgroup, .contact-caption hgroup{
+		padding: 0;
+		max-width: 90%;
+	}
+	.album-caption button, .about-caption button, .contact-caption button{
+		margin-bottom: 1rem;
+	}
+	.about-content-right{
+		order: 0;
+	}
+	.about-content-left{
+		order: 1;
+	}
 }
 
+@media screen and (max-width: 576px){
+	.h-carousel-item{
+		font-size: 1.6em;
+	}
+	.h-slide-text p:last-child{
+		font-size: 1em;
+	}
+	.h-carousel .carousel-control-prev, .h-carousel .carousel-control-next, .t-carousel .carousel-control-prev, .t-carousel .carousel-control-next{
+	    transform: scale(.7);
+	}
+	hgroup h3{
+		font-size: 1.2em;
+	}
+	hgroup p{
+		font-size: 1.9em;
+	}
+	.album-content-left, .thoughts-section hgroup{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.services-section hgroup, .album-caption hgroup, .about-caption hgroup, .contact-caption hgroup{
+		max-width: 100%;
+		padding: 0 1vw;
+	}
+	.serv-item{
+		padding: 0;
+		height: 45vw;
+	}
+	.serv-box, .serv-box::before, .serv-box img{
+		max-height: 100%;
+		object-position: center 3vw;
+	}
+	.shop-box{
+		height: 40vw;
+	}
+	.shop-item{
+		height: 33vw;
+		max-width: 33vw;
+	}
+	.t-carousel .carousel-item-next, .t-carousel .carousel-item-prev, .t-carousel .carousel-item.active{
+		flex-direction: column;
+	}
+	.thoug-box, .thoug-box p{
+		margin: 1vw;
+	}
+	.contact-details dl, .footer{
+		padding: 3vw 0;
+	}
+	.footer nav ul li{
+		padding: 1vw 3vw;
+	}
+	.social a{
+		font-size: 2.4em;
+	}
+	.copyright p{
+		font-size: 1.4em;
+	}
+}
