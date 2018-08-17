@@ -59,9 +59,12 @@ overflow-x: hidden;
 	padding-top: 20px;
 	width: 100%;
 	margin: auto; 
+	display: -ms-flexbox; 
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 .navbar:first-child {
   z-index: 99999;
@@ -84,9 +87,12 @@ overflow-x: hidden;
 	font-family: 'Frank Ruhl Libre', serif;
 }
 .nav-item {
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	padding: 0 1vw;
 }
 .h-carousel{
@@ -162,16 +168,23 @@ overflow-x: hidden;
 
 .section-general{
 	/*min-height: 500px;*/
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
 	padding: 5vw 0;
 }
 section hgroup{
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	padding-bottom: 4vw;
 }
 hgroup h3{
@@ -249,8 +262,10 @@ hgroup p{
 .serv-box img, .album-gallery img, .about-img img{
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-	object-position: center top;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center top;
+	   object-position: center top;
 	filter: grayscale(100%) brightness(80%);
 	z-index: -1;
 	transition: .2s linear;
@@ -261,15 +276,20 @@ hgroup p{
 }
 .about-img img{
 	height: 100%;
-	object-fit: cover;
-	object-position: center;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center;
+	   object-position: center;
 }
 
 .serv-box, .album-item a, .conctact-caption{
 	position: relative;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	overflow: hidden;
 }
 .serv-box::before, .album-item a::before{
@@ -286,9 +306,12 @@ hgroup p{
 .album-item a::after{
 	content: url(../images/arrow-r.png);
 	position: absolute;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	transform: scale(.3);
 	width: 100%;
 	height: 100%;
@@ -323,10 +346,14 @@ hgroup p{
 /*   ALBUMS  &  ABOUT   SECTION   */
 
 .album-caption, .album-caption hgroup, .about-caption, .contact-caption, .contact-caption hgroup{
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: end;
+	    align-items: flex-end;
 	padding-bottom: 0;
 }
 
@@ -334,7 +361,8 @@ hgroup p{
 	max-width: 22em;
 }
 .about-caption, .about-caption hgroup{
-	align-items: flex-start;
+	-ms-flex-align: start;
+	    align-items: flex-start;
 	padding-bottom: 0;
 }
 .album-caption hgroup p, .contact-caption hgroup p{
@@ -363,13 +391,17 @@ hgroup p{
 	padding: 0;
 }
 .album-content-left, .album-content-right, .about-content-left, .about-content-right{
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 .album-gallery{
 	margin: 0;
 	padding: 0;
+	display: -ms-grid;
 	display: grid;
   	grid-gap: 0;
 }
@@ -414,10 +446,14 @@ hgroup p{
 	height: 25vw;
 	margin: 1vw;
 	background-color: #eaeaea;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	transition: .2s linear;
 
 }
@@ -438,9 +474,12 @@ hgroup p{
 	transition: all .2s linear;
 }
 .shop-box a, .shop-item{
+	display: -ms-flexbox;
 	display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
 }
 .shop-box a{
 	width: 100%;
@@ -462,10 +501,14 @@ hgroup p{
 
 }
 .contact-details dl{
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 	background-color: #f2989e;
 	color: #fff;
 	padding: 5vw;
@@ -504,10 +547,14 @@ hgroup p{
 		/*   * SLIDER *   */
 
 .t-carousel .carousel-item-next, .t-carousel .carousel-item-prev, .t-carousel .carousel-item.active {
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-direction: row;
+	    flex-direction: row;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 .t-carousel-inner{
 	width: 80vw;
@@ -542,7 +589,8 @@ hgroup p{
 	margin: 0 1%;
 	padding: 3vw;
 	transition: all .1s ease-out;
-	flex: 0 0 48%;
+	-ms-flex: 0 0 48%;
+	    flex: 0 0 48%;
 }
 .thoug-box h4{
 	font-family: 'Frank Ruhl Libre', serif;
@@ -577,8 +625,10 @@ hgroup p{
 	background-color: #000;
 	color: #fff;
 	min-height: 40vh;
-	flex-direction: column;
-	justify-content: center;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
 	padding: 5vw 0;
 	margin-top: 5vw;
 }
@@ -643,7 +693,8 @@ hgroup p{
 	}
 	.navbar{
 		position: fixed;
-		justify-content: flex-start;
+		-ms-flex-pack: start;
+		    justify-content: flex-start;
 		padding: 5vh 2.5vw; 
 		width: 100%;
 	}
@@ -685,7 +736,8 @@ hgroup p{
 		margin: 0 auto;
 		}
 	.serv-content{
-		flex-direction: column;
+		-ms-flex-direction: column;
+		    flex-direction: column;
 	}
 	.serv-item{
 		margin-bottom: 4vw;
@@ -694,7 +746,8 @@ hgroup p{
 		margin: 0 auto;
 	}
 	.album-caption, .album-caption hgroup, .about-caption, .about-caption hgroup, .contact-caption, .contact-caption hgroup{
-		align-items: center;
+		-ms-flex-align: center;
+		    align-items: center;
 	}
 	.album-caption hgroup p, .contact-caption hgroup p, .about-caption hgroup p{
 		text-align: center;
@@ -710,10 +763,12 @@ hgroup p{
 		margin-bottom: 1rem;
 	}
 	.about-content-right{
-		order: 0;
+		-ms-flex-order: 0;
+		    order: 0;
 	}
 	.about-content-left{
-		order: 1;
+		-ms-flex-order: 1;
+		    order: 1;
 	}
 }
 
@@ -747,7 +802,8 @@ hgroup p{
 	}
 	.serv-box, .serv-box::before, .serv-box img{
 		max-height: 100%;
-		object-position: center 3vw;
+		-o-object-position: center 3vw;
+		   object-position: center 3vw;
 	}
 	.shop-box{
 		height: 40vw;
@@ -757,7 +813,8 @@ hgroup p{
 		max-width: 33vw;
 	}
 	.t-carousel .carousel-item-next, .t-carousel .carousel-item-prev, .t-carousel .carousel-item.active{
-		flex-direction: column;
+		-ms-flex-direction: column;
+		    flex-direction: column;
 	}
 	.thoug-box, .thoug-box p{
 		margin: 1vw;
