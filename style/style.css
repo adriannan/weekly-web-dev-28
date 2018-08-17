@@ -765,8 +765,16 @@ hgroup p{
 	.contact-details dl, .footer{
 		padding: 3vw 0;
 	}
-	.footer nav ul li{
-		padding: 1vw 3vw;
+	.footer nav ul{
+		flex-direction: column;
+	}
+	.footer nav ul .col-sm-2{
+		width: 70%;
+		max-width: 100%;
+		padding: 3vw;
+	}
+	.footer nav ul li:not(:first-child){
+		border-top: 1px solid #3a3a3a;
 	}
 	.social a{
 		font-size: 2.4em;
