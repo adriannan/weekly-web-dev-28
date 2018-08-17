@@ -788,7 +788,7 @@ hgroup p{
 	hgroup p{
 		font-size: 1.9em;
 	}
-	.album-content-left, .thoughts-section hgroup{
+	.album-content-left, .about-content-right, .thoughts-section hgroup, .shop-section hgroup, .contact-caption{
 		padding-left: 0;
 		padding-right: 0;
 	}
